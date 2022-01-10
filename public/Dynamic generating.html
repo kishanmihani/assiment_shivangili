@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        dynamic Element
+        </title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+              var categories=["All","Electroncs","Footwear","fashion","Men's clothing"];
+              function bodyload(){
+                  for(var category of categories){
+                      var li=document.createElement("li");
+                      li.innerHTML = category;
+                      document.getElementById("lstCategories").appendChild(li);
+
+
+                      var option=document.createElement("option");
+                      option.text=category;
+                      option.value=category;
+
+                      document.getElementById("selectCategories").appendChild(option);
+
+                      var td=document.createElement("td");
+                      td.innerHTML=category;
+
+                      var tr=document.createElement("tr");
+                      tr.appendChild(td);
+
+                      document.querySelector("tbody").appendChild(tr);
+
+                      var button=document.createElement("button");
+                      button.className="btn  btn-link";
+                    button.innerHTML=category;
+
+                    var liNav=document.createElement("li");
+                    liNav.appendChild(button);
+
+                    document.getElementById("navbar").appendChild(liNav);
+
+                  }
+              }
+
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid">
+<h2>Nav Bar</h2>
+     <ul id="navbar">
+
+     </ul>
+
+     <ol id="lstCategories">
+         
+    </ol>
+    <h2>Select Category</h2>
+    <select id="selectCategories">
+
+    </select>
+    <h2>
+        Categories list
+    </h2>
+    <table border="4" width="300">
+        <thead>
+            <tr>
+                <th>Product Categories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                All
+            </tr>
+        </tbody>
+    </table>
+     
+    </body>
+</html>

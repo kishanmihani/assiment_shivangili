@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>map</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <script>
+        "use strict"
+        var products=[];
+        function LoadProducts(){
+            fetch("http://fakestoreapi.com/products")
+            .then(function (response){
+                return response.json();
+            })
+            .then(function(data){
+                products=data;
+                document.getElementById("productTitle").innerHTML=products[0].title;
+                document.getElementById("productImage").src=products[0].image;
+            })
+        }
+        var product;
+        function GetProductById(id){
+            fetch(`http://fakestoreapi.com/products/${id}`)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                product=data;
+                document.getElementById("productTitle").innerHTML=product.title;
+                document.getElementById("productImage").src=product.image;
+            })
+        }
+
+
+
+
+        var count = 0;
+        function NextClick(){
+            count++;
+            GetProductById(count);
+            if(count>20){
+                alert("This is the last product");
+                count=1;
+            }
+        }
+        function PreviousClick(){
+            count--;
+            GetProductById(count);
+        }
+        function bodyload(){
+            LoadProducts();
+        }
+    </script>
+    <body class="container-fluid" onload="bodyload()">
+        <div class="justify-content-center align-items-center">
+            <div class="card mt-4">
+                <div class="card-header text-center">
+                <h2 id="productTitle"></h2>
+            </div>
+            <div class="card-body text-center">
+                <img width="70%" height="300" id="productImage">
+            </div class="card-footer text-center">
+            <div class="card-footer text-center"> 
+                <button class="btn btn-primary" onclick="PreviousClick()"><span class="bi bi-chevron-compact-left"></span></button>
+                <button class="btn btn-primary" onclick="NextClick()"><span  class="bi bi-chevron-compact-right"></span></button>
+            </div>
+        </div>
+    </div>
+    </body>  
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           
+        </title>
+    </head>
+    <style>
+        dt{
+background-color: grey;
+color:white;
+margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        var products=[
+            {Name:'Samsung TV',Category:'Electronices'},
+            {Name:'Mobiles',Category:'Electronices'},
+            {Name:'Nike Casule',Category:'Footware'},
+            {Name:'Lee Boot',Category:'Footware'}
+        ]
+        function bodyload(){
+        
+        var queryString=location.search;
+        var keyword=queryString.substring(queryString.indexOf("=")+1);
+        for(var item of products){
+            if(item.Category==keyword){
+                document.querySelector("p").innerHTML+=item.Name+"<br>";
+            }
+        }
+    }
+
+        </script>
+    <body onload="bodyload()">
+        <h2>Result</h2>
+     <p>Footware</p>
+     <!--<script src="main.js"></script>-->
+    </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+         Room Booking
+        </title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+        <style>
+
+        </style>
+        <script>
+            function SingleRoom(){
+                var x=document.getElementById("SingleRoom");
+                if(x.style.display === "none"){
+                    x.style.display="block";
+                }else{
+                    x.style.display="none";
+                }
+            }
+        </script>    
+    </head>
+    <body>
+     <div>
+         
+             <h2  style="text-align: center;font-weight: bold;font-size: 30px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;padding:20px;"><span style="background-color:red;border-radius: 20%;" class="bi bi-door-closed"></span>Hotel Room Booking Form</h2>
+     </div>    
+         <section class="mt-2 p-2">
+         <div class="accordtion p-2" id="RoomBooking">
+          <div class="accordion-item">
+              <h2 class="accordion-header"><button class="btn btn-dark w-100" data-bs-target="#customerRoom" data-bs-toggle="collapse" ><span class="fas fa-user-tie"></span> Customer Info</button></h2>
+              <div class="collapse accordion-collapse show" id="customerRoom" data-bs-parent="#RoomBooking">
+          
+          <dl style="margin-left:15px;display:grid;grid-template-columns: 2fr 2fr; margin:10px">
+              <dt>Your Name</dt>
+              <dd><input type="text" id="RoomName" required style="border-radius: 15%;"></dd>
+              <dt>Check in Date</dt>
+              <dd><input type="date" id="RoomName" required style="border-radius: 10%; width:190px"></dd>
+              <dt>Total Number of Days</dt>
+              <dd><input type="number" id="RoomName" required  style="border-radius: 15%;"></dd>
+              <dt>Total Number of Person</dt>
+              <dd><input type="number" id="RoomName" required  style="border-radius: 15%;"></dd>
+
+
+          </dl>
+            </div>
+         </div>
+         <div class="accordion-item">
+            <h2 class="accordion-header"><button class="btn btn-dark w-100" data-bs-target="#Room" data-bs-toggle="collapse">Select Your Room</button></h2>
+            <div class="collapse accordion-collapse show" id="Room" data-bs-parent="#RoomBooking">
+             <div class="row">
+                 <div class="col">
+                  <div class="card">
+                   <img src="../images/SingleRoom.jpg" alt="Single" width="100%" height="200">
+                   <div  class="card-header">
+                        <h2>Single Room </h2>
+                        <button onclick="SingleRoom()">Details</button>
+                        
+                        <p id="SingleRoom" style="display: none;">A room with the facility of single bed. It is meant for single occupancy. It has an attached bathroom, a small dressing table, a small bedside table, and a small writing table. Sometimes it has a single chair too.</p>
+                   </div>
+                   <div class="card-footer">
+                    <h3>&#8377;800/-<input type="checkbox" value="SingleR Room" class="form-check-input" name="Room" id="optSingleRoom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="select1" style="border-radius: 50%;">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    </select></h3>
+                   </div>
+                   
+                  </div>
+                 </div>
+                     
+                 <div class="col">
+                    <div class="card">
+                     <img src="../images/Double.jpg" alt="Single" width="100%" height="200">
+                     <div  class="card-header">
+                          <h2>Double Room </h2>
+                          <button onclick="SingleRoom()">Details</button>
+                          
+                          <p id="SingleRoom" style="display: none;">A room with the facility of Double bed. </p>
+                     </div>
+                     <div class="card-footer">
+                      <h3>&#8377;800/-<input type="checkbox" value="Double Room" class="form-check-input" name="Room" id="optDoubleRoom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="select1" style="border-radius: 50%;">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+            
+                      </select></h3>
+                     </div>
+                     
+                    </div>
+                   </div>
+                
+                
+                   <div class="col">
+                    <div class="card">
+                     <img src="../images/suite.jpeg" alt="Single" width="100%" height="200">
+                     <div  class="card-header">
+                          <h2>Suite Room</h2>
+                          <button onclick="SuiteRoom()">Details</button>
+                          
+                          <p id="SuiteRoom" style="display: none;">A room with the facility of single bed. It is meant for single occupancy. It has an attached bathroom, a small dressing table, a small bedside table, and a small writing table. Sometimes it has a single chair too.</p>
+                     </div>
+                     <div class="card-footer">
+                      <h3>&#8377;1000/-<input type="checkbox" value="Suite Room" class="form-check-input" name="Room" id="optSuiteRoom">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="select1" style="border-radius: 50%;">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      </select></h3>
+                     </div>
+                     
+                    </div>
+                   </div>   
+             </div> </div></div>
+            
+            
+             <div class="accordion-item">
+                <h2 class="accordion-header">
+                 <button class="btn btn-dark w-100 " data-bs-parent="#add-item" data-bs-toggle="collapse">Slect  Amenities</button>
+                </h2>
+                <div class="collapse accordion-collapse show " id="add-item" data-bs-parent="#RoomBooking">
+                    <div class="row">
+                        <div class="col">
+                          <div class="card">
+                              <img src="../images/Locker.jpeg" alt="Locker" width="100%" height="200">
+                              <div class="card-header">
+                                  <h2>Locker</h2>
+                                  </div>
+                                  <div class="card-footer">
+                                    <h3>&#8377;1000/-<input type="checkbox" value="Locker" class="form-check-input" name="add" id="optLocker">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="select1" style="border-radius: 50%;">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    </select></h3>
+                                   </div>
+                              </div>  
+                          </div>
+                          <div class="col">
+                            <div class="card">
+                                <img src="../images/Ac.jpeg" alt="Ac" width="100%" height="200">
+                                <div class="card-header">
+                                    <h2>Ac </h2>
+                                    </div>
+                                    <div class="card-footer">
+                                      <h3>&#8377;1000/-<input type="checkbox" value="Ac" class="form-check-input" name="add" id="optAc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="select1" style="border-radius: 50%;">
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                      <option>6</option>
+                                      <option>7</option>
+                                      </select></h3>
+                                     </div>
+                                </div>  
+                            </div>
+                         
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../images/wifi.jpg" alt="wifi" width="100%" height="200">
+                                    <div class="card-header">
+                                        <h2>Wi-fi service</h2>
+                                        </div>
+                                        <div class="card-footer">
+                                          <h3>&#8377;1000/-<input type="checkbox" value="wi-fi" class="form-check-input" name="add" id="optWi-fi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select id="select1" style="border-radius: 50%;">
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                          <option>6</option>
+                                          <option>7</option>
+                                          </select></h3>
+                                         </div>
+                                    </div>  
+                                </div>
+                              </div>
+                          <div class="mt-2 " style="text-align: center;">
+                                <button data-bs-toggle="base" data-bs-target="#RegisterSummary" class="btn btn-warning" onclick="GetBillRegister()"> Register</button>
+                                <button data-bs-toggle="base" data-bs-target="#RegisterSummary" class="btn btn-danger" onclick="GetBillCheckout()">Checkout</button>
+                          </div>
+                    </div>
+            
+            </div>
+            </section>   
+         
+     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

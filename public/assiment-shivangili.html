@@ -1,0 +1,144 @@
+ <html>
+    <head>
+        <title>
+            assiement  shivangili
+        </title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body style="background-color: rgb(128, 128, 245);">
+        <header>
+       <div style="display:grid;grid-template-columns: 4fr 7fr; background-color: black;height:95px">
+        <div style="margin-left: 50px;">
+            <img src="../images/logo.png" style="border-radius: 100%; height:75px; margin:10px">
+        </div>
+        <div style="display:grid;grid-template-columns: 3fr 4fr 4fr 4fr;margin-top:20px;">
+           <div>
+               <button class="btn btn-outline-dark bi bi-house" style="margin-right:30px;font-size:20px;height:55px;width:120px;font-weight: bold; margin-left:20px;border:0px;color:white" >Home</button>
+           </div>
+           <div>
+               <button class="btn btn-outline-dark bi bi-person" style="margin-right:30px;font-size: 20px;height:55px;width:100px;font-weight: bold;border:0px;color:white">Login</button>
+           </div>
+           <div>
+               <button class="btn btn-outline-dark bi bi-info" style="margin-right:30px;font-size:20px;height:55px;width:135px;font-weight: bold; border:0px;color:white;">About Us</button>
+           </div>
+           
+           <div>
+              <button class="btn btn-outline-dark bi bi-phone" style="margin-right:30px;font-size: 20px;height:55px;width:125px;font-weight: bold;border:0px;color:white;"> Contact</button> 
+           </div>
+       </div></div>
+        </header>
+        <main>
+        <div style="display:grid;grid-template-columns: 2fr 7fr;">
+        <div >
+            <div style="width:450px;text-align: center;margin-left:105px">
+                <h1 style="color:white; ">&nbsp;AI &nbsp;Doesn't &nbsp;Have &nbsp;To &nbsp;Be &nbsp;Evil&nbsp; To &nbsp;Destroy&nbsp; &nbsp;&nbsp;Humanity</h1>
+                <img src="../images/brainbulb.jpg" style="width:400px;height:370px;background: purple;">
+            </div>
+        </div>
+ <div  style="background-color:rgb(97, 95, 95);text-align: center;border:5px solid white;margin-top:20px;margin-left:175px;width:50%;height: 500px;">
+            <h2 style="color:white">To &nbsp;Proceed &nbsp;Please &nbsp;Click Any&nbsp; One Button From&nbsp;&nbsp; Bellow</h2>
+            <button data-bs-toggle="modal" data-bs-target="#summary" style="margin:22px;font-weight: bold; font-size: 23px;" class="btn btn-light w-75 h-15" onclick="BookADemo()">Book a Demo</button>
+            <br>
+            <button data-bs-toggle="modal" data-bs-target="#summary1" style="margin:22px;font-weight: bold;font-size:23px;" class="btn btn-light w-75 h-15" onclick="CallUs()">Call Us</button>
+            <br>
+            <button data-bs-toggle="modal" data-bs-target="#summary2" style="margin:22px;font-weight: bold;font-size: 23px;" class="btn btn-light w-75 h-15" onclick="Reachusat()">Reach Us at</button>
+        <br></div>
+        
+        <div class="modal fade" id="summary" >
+            
+            <div class="modal-dialog"  style="margin-top:190px;">
+                
+                <div class="modal-content" style="background-color: transparent; color:white">
+                    
+                 <div class="modal-header ">
+
+                     <h1 >Book a Demo</h1>
+                     <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                 </div>
+                 <div class="modal-body" style="text-align: center;background-color:rgb(110, 107, 107);border:5px solid white;">
+             <form action="submit">  
+                 <dl>     
+                    <dd><input type="text" placeholder="Name" style="text-align: center;padding: 5px; margin: 7px;" class="w-75 h-75"></dd>
+                    <dd><input type="text" placeholder="Email" style="text-align: center;padding: 5px; margin: 7px;" class="w-75 h-75"></dd>
+                    <dd><input type="text" placeholder="Phone Number" style="text-align: center;padding: 5px; margin: 7px;" class="w-75 h-75"></dd>
+                    <button type="button" style="padding: 5px; margin: 7px;"class="btn btn-dark w-75">Submit</button>
+                 </dl></form></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="summary1" >
+            
+            <div class="modal-dialog"  style="margin-top:190px;">
+                
+                <div class="modal-content" style="background-color: transparent; color:white">
+                    
+                 <div class="modal-header ">
+
+                     <h1 >Call Us</h1>
+                     <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                 </div>
+                 <div class="modal-body" style="text-align: center;background-color:rgb(110, 107, 107);border:5px solid white;">
+                    <h1 ><span class="bi bi-phone-fill"></span>Phone Number</h1><br>
+                    <h5 style="background-color:white; margin:17px;padding:3px ; height: 30px; color:blue" ><span style="color:black">mobile no:-</span>12345-67898</h5>
+                    <h5 style="background-color:white;margin:17px;padding:3px;height:30px;color:blue"><span style="color:black">mobile no:-</span>12345-67898</h5>
+        
+                
+                 </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="summary2" >
+            
+            <div class="modal-dialog"  style="margin-top:190px;">
+                
+                <div class="modal-content" style="background-color: transparent; color:white">
+                    
+                 <div class="modal-header ">
+
+                     <h1 >Reach Us At</h1>
+                     <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                 </div>
+                 <div class="modal-body" style="background-color:rgb(110, 107, 107);border:5px solid white;">
+                    <h2>Address</h2>
+                    <h5 style="color:blue;background-color: white;"><span style="color:black">Home:-</span>Naryan Nagar,Mata Chowk,Khandwa</h5><br>
+                    <h5 style="color:blue;background-color: white;"><span style="color:black">state:-</span>Madhya Pradesh</h5><br>
+                    <h5 style="color:blue;background-color: white;"><span style="color:black">Pin Code:-</span>450001</h5><br>
+                 </div>
+                </div>
+            </div>
+        </div>
+</div>
+</main>
+<footer style="margin-top:20px">
+<div style="display: grid;grid-template-columns:3fr 2fr 3fr ; background-color: rgb(44, 42, 42);">
+    <div>
+       <ul style="list-style: none;">
+           <li style="font-weight: bold;font-size: 30px;font-family: sans-serif;color:white">Contact With Us</li>
+           <li >&nbsp;&nbsp;&nbsp;<span class="bi bi-facebook " style="background-color: blue;color:white"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-whatsapp" style="background-color: green;color:white"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-instagram" style="background-color: red;color:white"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bi bi-twitter" style="background-color: deepskyblue;color:white"></span></li>
+       </ul>
+    </div>
+    <div>
+        <ul style="list-style:none; margin: 5px;">
+            <li><img src="../images/logo.png" style="border-radius: 50%;height:75px"></li>
+        </ul>
+    </div>
+    <div>
+        <ul style="list-style: none;">
+            <li style="font-weight: bold;font-size: 25;" class=" link-success" >&nbsp; Important Links</li>
+            <li style="color:white"><b style="font-size: 25px; margin-left: 10px;"class="bi bi-house">Home</b> <b style="font-size: 25px;margin-left: 10px;" class="bi bi-person">Login</b> <b style="font-size: 25px;margin-left: 10px;" class="bi bi-info">About </b> <b style="font-size: 25px;margin-left: 10px;" class="bi bi-phone">Contacts</b></li>
+        </ul>
+    </div>
+</div>
+</footer>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

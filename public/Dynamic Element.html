@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Dynamic element</title>
+<script>
+    function AddClick(){
+        var pic=document.createElement("img");
+        pic.src="../images/2ND LOGO PNG.png";
+        pic.width ="100";
+        pic.height="100";
+        document.getElementById("container").appendChild(pic);
+    }
+</script>
+    </head>
+    <body>
+        <div>
+            <button onclick="AddClick()">Add to images</button><img src="../images/2ND LOGO PNG.png">
+        </div>
+        <div id="container"></div>
+    </body>
+</html>

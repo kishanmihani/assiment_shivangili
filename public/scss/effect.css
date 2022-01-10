@@ -1,0 +1,14 @@
+.container {
+  border: 2px solid darkcyan;
+  padding: 10px;
+  box-shadow: 2px 3px 3px yellow;
+}
+.container h2 {
+  color: red;
+  text-shadow: 2px 3px 3px yellow;
+}
+.container p {
+  color: blue;
+}
+
+/*# sourceMappingURL=effect.css.map */

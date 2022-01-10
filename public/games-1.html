@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+<style>
+    div {
+        background: #de9a44;
+        margin: 3px;
+        width: 80px;
+        height: 40px;
+        display: none;
+        float: left;
+    }
+       </style>
+    </head>
+    <body>
+        
+Click me!
+<div></div>
+<div></div>
+<div></div>
+ 
+<script>
+$( document.body ).click(function () {
+  if ( $( "div" ).first().is( ":hidden" ) ) {
+    $( "div" ).slideDown( "slow" );
+  } else {
+    $( "div" ).hide();
+  }
+});
+</script
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping Cart</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function(){
+                $.ajax({
+                    method:"get",url: "http://fakestoreapi.com/products/categories",success:function(response){
+                        response.unshift("All");
+                        $.each(response,function(key,value){
+                            $(`<option>${value}</option>`).appendTo("#lstCatagory");
+                        })
+                    }
+                })
+
+                $.ajax({
+                    method:"get",url:"http://fakestoreapi.com/products",success:function(response){
+                        console.log("response",response)
+                        $.each(response,function(key,item){
+                            $(`
+                            <div class="card w-25 m-2">
+                                <img src="${item.image}" class="card-img-top" height="200">
+                                <div class="card-header">
+                                    <p>${item.title}</p>
+                                </div>
+                                <div class="card-body">
+                                    <p>${item.price}</p>
+                                </div>
+                               <div class="card-footer">
+                                <button value=${item.id} class="btn btn-danger w-100" id="btnAdd">
+                                    <span class="bi bi-cart4"></span>Add to cart
+                                    </button>
+                                    </div>
+                                    </div>
+                            `).appendTo("#catalog");
+                        })
+                    }
+                })
+                $(document).on("click","#btnAdd",function(event){
+                    alert(event.target.value);
+                })
+            })
+        </script>
+    </head>
+    <body class="container-fluid">
+    <header class="bg-danger text-white p-1 text-center">
+        <h1><span class="bi bi-cart3"></span>Amazon</h1>
+    </header>
+    <section>
+        <div class="row">
+            <div class="col-3">
+             <div>
+                 <label class="form-label">
+                     Select Catagory
+                 </label>
+                 <div>
+                     <select id="lstCatagory" class="form-select">
+
+                     </select>
+                 </div>
+             </div>
+
+            </div>
+            <div class="col-9">
+                <div class="d-flex flex-wrap" id="catalog">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>

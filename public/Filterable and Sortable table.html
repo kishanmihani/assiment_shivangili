@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UI</title>
+        <link rel="stylesheet" href="../node_modules/jquery-ui-1.13.0/jquery-ui.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.min.js">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/jquery-ui-1.13.0/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myInput").on("keyup",function(){
+                var value=$(this).val().toLowerCase();
+                $("#myTable tr").filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                })
+                });
+            });
+        </script>    
+        <style>
+          body{
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+              padding:5% 22%;
+              background-image: url(../images/Argus.jpg);
+              background-size: cover;
+          } 
+          h2{
+              font-family: Arial;
+              color:#555;
+              font-size: 1cm;
+              margin-left: 30%;
+          } 
+          table{
+              font-family: sans-serif;
+              border-collapse: collapse;
+              width:100%;
+              border-bottom: 2px;
+          }
+          th,td{
+              text-align: left;
+              padding: 8px;
+            
+          }
+          tr{
+              border-bottom: 1px solid black;
+          }
+          .main{
+              height:100%;
+              width:800px;
+              background-color: #fff;
+              padding:5px 10px 10px 10px;
+              border-radius: 30px 30px 30px 30px;
+              box-shadow: 16px 22px 51px -24px rgb(249, 253, 2);
+          }
+        </style>
+        <script>
+            $(function(){
+              $("#myTable").sortable();
+            });
+        </script>
+        <style>
+    #sortable {  margin: 0; padding: 0; width: 60%; }
+  #sortable tr { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  #sortable tr span { position: absolute; margin-left: -1.3em; }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+         <h2>Filterable and sortable table</h2>
+         <input id="myInput" type="text" placeholder="Search..." class="form-control"><br><br>
+
+         <table class="table table-hover" >
+         <thead class="thead-dark">
+             <tr >
+                 <th>ID</th>
+                 <th>First Name</th>
+                 <th>Last Name</th>
+                 <th>Email ID</th>
+                 <th>City</th>
+                 
+             </tr>
+             
+             <tbody id="myTable">
+                 <tr>
+                     <td>1</td>
+                     <td>Kishan</td>
+                     <td>Mihani</td>
+                     <td>kishan@gmail.com</td>
+                     <td>indor</td>
+                 </tr>
+                       
+                 <tr>
+                    <td>2</td>
+                    <td>Raj</td>
+                    <td>M</td>
+                    <td>Raj@gmail.com</td>
+                    <td>indor</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Mohan</td>
+                    <td>I</td>
+                    <td>Mohan@gmail.com</td>
+                    <td>indor</td>
+                </tr>
+
+                <tr >
+                    <td>4</td>
+                    <td>Raman</td>
+                    <td>H</td>
+                    <td>Raman@gmail.com</td>
+                    <td>indor</td>
+                </tr>
+
+                <tr style="border-color: white;">
+                    <td>5</td>
+                    <td>Sohan</td>
+                    <td>A</td>
+                    <td>kishan@gmail.com</td>
+                    <td>indor</td>
+                </tr>
+             </tbody>
+         </thead>
+         </table>
+        </div>
+    </body>
+</html>
